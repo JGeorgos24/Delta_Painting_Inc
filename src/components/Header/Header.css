@@ -1,0 +1,43 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+    width:100vw;
+    background-color: gray;
+}
+
+.HeaderLogo{
+    height: 100px;
+    width: 325px;
+    object-fit: fit;
+    margin:15px;
+    border-radius: 35px;
+}
+
+.NavBarOuter{
+    display: flex;
+    align-items: center;
+}
+
+.NavBarInner{
+    display: flex;
+    align-items: center;
+    background-color: lightgray;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.LinksInNavBar{
+    margin:10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+
+.LinksInNavBar:hover{
+    margin:10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bolder;
+}
