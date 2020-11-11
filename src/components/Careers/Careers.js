@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import "./careers.css";
+import "./Careers.css";
 import {Link} from "react-router-dom";
 
 class Careers extends Component{
@@ -97,7 +97,7 @@ class Careers extends Component{
                     </div>
 
                     <div>
-                    Address 1: 
+                    Address: 
                         <input className = 'address1'
                             type = 'text'
                             name = 'address1'

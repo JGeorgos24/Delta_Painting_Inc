@@ -1,0 +1,46 @@
+section{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.CareerInfo{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 10px;
+}
+
+.inputDescription{
+    width: 650px;
+}
+
+.firstName, .lastName, .emailAddress, .phone, .address1, 
+.city, .state, .zip, .unionName {
+    margin: 5px;
+    width: 150px;
+}
+
+.unionPainter{
+    margin: 5px;
+}
+
+
+.qualifications{
+    margin: 5px;
+    height: 50px;
+    width: 450px;
+}
+
+.submitButton{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+}
