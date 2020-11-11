@@ -14,6 +14,7 @@ import Contact from "./components/Contact/Contact";
 
 import RegisterForm from "./components/RegisterForm/RegisterForm"
 import LoginForm from "./components/LoginForm/LoginForm";
+import Profile from "./components/Profile/Profile";
 import {registerUser, loginUser, verifyUser, allCities} from "./services/api_helper";
 
 class App extends Component{
@@ -22,7 +23,6 @@ class App extends Component{
 
     this.state={
       currentUser: null,
-      loggedIn: false,
     }
   }
 
@@ -39,19 +39,21 @@ class App extends Component{
     const currentUser = await loginUser(loginData);
     console.log(currentUser)
     this.setState({currentUser});
-    this.props.history.push("/home");
+    this.props.history.push("/Profile");
   }
 
   handleVerify = async() => {
     const currentUser = await verifyUser();
     if (currentUser){
-      this.setState({currentUser});
-      this.props.history.push("/home");
+      this.setState({currentUser: currentUser});
+      this.props.history.push("/login");
     }
   }
 
-  handleLogout = () => {
+  handleLogout = async(e, currentUser) => {
+    e.preventDefault();
     localStorage.removeItem("authToken");
+    currentUser= this.state.currentUser
     this.setState({currentUser:null})
     this.props.history.push("/login");
   }
@@ -60,11 +62,11 @@ class App extends Component{
     this.handleVerify();
   }
 
-  render(){
+  render(props){
     return (
       <div className="App">
         <header className="App-header">
-          <Header {...this.state} />
+          <Header {...this.props} {...this.state}  currentUser={this.state.currentUser} handleVerify={this.handleVerify}/>
 
         </header>
 
@@ -105,14 +107,35 @@ class App extends Component{
             }} 
           />
 
-        <Route path="/login" render={() => (
-          <LoginForm handleLogin={this.handleLogin} />
-          )} 
+        <Route path="/login" render={(props) => {
+          return <LoginForm 
+            {...this.state} 
+            handleLogin={this.handleLogin}
+            handleVerify={this.handleVerify}
+            currentUser={this.state.currentUser}
+          />
+          }} 
         />
 
-        <Route path="/register" render={() => (
-          <RegisterForm handleRegister={this.handleRegister} />
-          )} 
+        <Route path="/register" render={(props) => {
+          return <RegisterForm 
+            {...this.state} 
+            handleRegister={this.handleRegister}
+            handleVerify={this.handleVerify} 
+            currentUser={this.state.currentUser}
+          />
+          }} 
+        />
+
+        <Route path="/Profile" render={(props) => {
+          return <Profile
+            {...this.props}
+            {...this.state} 
+            handleLogout={this.handleLogout}
+            handleVerify={this.handleVerify}  
+            currentUser={this.state.currentUser}
+          />
+          }} 
         />
 
         </main>

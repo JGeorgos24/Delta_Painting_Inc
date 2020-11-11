@@ -20,6 +20,10 @@ class LoginForm extends Component{
         })
     }
 
+    componentDidMount() {
+        this.props.handleVerify();
+    }
+
     render() {
         return(
             <form className="Login-Register-Form" onSubmit={(e) => this.props.handleLogin(e, this.state)}>
