@@ -22,8 +22,8 @@ class LoginForm extends Component{
 
     render() {
         return(
-            <form onSubmit={(e) => this.props.handleLogin(e, this.state)}>
-                <input
+            <form className="Login-Register-Form" onSubmit={(e) => this.props.handleLogin(e, this.state)}>
+                <input className="Login-Register-Input"
                     type="text"
                     name="username"
                     value={this.state.username}
@@ -31,7 +31,7 @@ class LoginForm extends Component{
                     onChange={this.handleChange}
                 />
 
-                <input
+                <input className="Login-Register-Input"
                     type="password"
                     name="password"
                     placeholder="Enter Password"
@@ -40,7 +40,7 @@ class LoginForm extends Component{
                 />
 
                 <input type="submit" value="Login" />
-                <Link className="RegisterLink" to="/register">Register</Link>
+                <Link className="Login-Register-Link" to="/register">Register</Link>
             </form>
         )
     }

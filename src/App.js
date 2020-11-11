@@ -22,6 +22,7 @@ class App extends Component{
 
     this.state={
       currentUser: null,
+      loggedIn: false,
     }
   }
 
@@ -30,7 +31,7 @@ class App extends Component{
     const currentUser = await registerUser(registerData);
     console.log(currentUser)
     this.setState({currentUser});
-    this.props.history.push("/posts");
+    this.props.history.push("/login");
   }
 
   handleLogin = async (e, loginData) => {
@@ -38,14 +39,14 @@ class App extends Component{
     const currentUser = await loginUser(loginData);
     console.log(currentUser)
     this.setState({currentUser});
-    this.props.history.push("/posts");
+    this.props.history.push("/home");
   }
 
   handleVerify = async() => {
     const currentUser = await verifyUser();
     if (currentUser){
       this.setState({currentUser});
-      this.props.history.push("/posts");
+      this.props.history.push("/home");
     }
   }
 

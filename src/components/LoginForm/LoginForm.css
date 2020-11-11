@@ -1,17 +1,17 @@
-form{
-    margin: 25px 10px 10px 10px;
+.Login-Register-Form{
+    margin: 40px 10px 10px 10px;
 }
 
-input{
+.Login-Register-Input{
     margin: 10px;
 }
 
-.RegisterLink{
+.Login-Register-Link{
     color:black;
     text-decoration:none;
 }
 
-.RegisterLink:hover{
+.Login-Register-Link:hover{
     color:red;
     text-decoration:none;
     font-weight: bolder;

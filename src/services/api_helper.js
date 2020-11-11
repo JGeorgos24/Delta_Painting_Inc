@@ -42,33 +42,33 @@ export const verifyUser = async () => {
 
 // ========== CITIES =============
 
-export const allCities = async() => {
-    const resp= await api.get('/city/all');
-    return resp;
-}
+// export const allCities = async() => {
+//     const resp= await api.get('/city/all');
+//     return resp;
+// }
 
 
 
 
 
 //  ========== POST ============
-export const indexPosts = async () => {
-    const resp = await api.get("/post/all");
-    console.log(resp)
-    return resp.data;
-}
+// export const indexPosts = async () => {
+//     const resp = await api.get("/post/all");
+//     console.log(resp)
+//     return resp.data;
+// }
 
-// localhost:3001/post/:cityid
-export const postPost = async (postData) => {
-    const resp = await api.post("/post/1", postData);
-    return resp.data;
-}
+// // localhost:3001/post/:cityid
+// export const postPost = async (postData) => {
+//     const resp = await api.post("/post/1", postData);
+//     return resp.data;
+// }
 
-export const putPost = async (postId, postData) => {
-    const resp = await api.put(`/post/${postId}`, postData);
-    return resp.data;
-}
+// export const putPost = async (postId, postData) => {
+//     const resp = await api.put(`/post/${postId}`, postData);
+//     return resp.data;
+// }
 
-export const destroyPost = async (id) => {
-    await api.delete(`/post/${id}`);
-}
+// export const destroyPost = async (id) => {
+//     await api.delete(`/post/${id}`);
+// }
