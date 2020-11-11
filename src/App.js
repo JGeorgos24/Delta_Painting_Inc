@@ -1,27 +1,63 @@
 import React, {Component} from "react";
 import './App.css';
 
-import { Route, withRouter } from 'react-router-dom';
+import { Route, Link, withRouter } from 'react-router-dom';
 import { render } from 'react-dom';
 
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
-import Services from "./components/Services/Services";
+import DeltaServices from "./components/DeltaServices/DeltaServices";
 import PhotoGallery from "./components/PhotoGallery/PhotoGallery";
 import Careers from "./components/Careers/Careers";
 import Contact from "./components/Contact/Contact";
 
+import RegisterForm from "./components/RegisterForm/RegisterForm"
+import LoginForm from "./components/LoginForm/LoginForm";
+import {registerUser, loginUser, verifyUser, allCities} from "./services/api_helper";
 
 class App extends Component{
   constructor() {
     super();
 
     this.state={
-
+      currentUser: null,
     }
   }
 
+  handleRegister = async (e, registerData) => {
+    e.preventDefault();
+    const currentUser = await registerUser(registerData);
+    console.log(currentUser)
+    this.setState({currentUser});
+    this.props.history.push("/posts");
+  }
+
+  handleLogin = async (e, loginData) => {
+    e.preventDefault();
+    const currentUser = await loginUser(loginData);
+    console.log(currentUser)
+    this.setState({currentUser});
+    this.props.history.push("/posts");
+  }
+
+  handleVerify = async() => {
+    const currentUser = await verifyUser();
+    if (currentUser){
+      this.setState({currentUser});
+      this.props.history.push("/posts");
+    }
+  }
+
+  handleLogout = () => {
+    localStorage.removeItem("authToken");
+    this.setState({currentUser:null})
+    this.props.history.push("/login");
+  }
+
+  componentDidMount() {
+    this.handleVerify();
+  }
 
   render(){
     return (
@@ -44,9 +80,9 @@ class App extends Component{
             }} 
           />
 
-          <Route exact path="/Services"
+          <Route exact path="/DeltaServices"
             render={ (props) => {
-              return <Services {...this.state} />
+              return <DeltaServices {...this.state} />
             }} 
           />
 
@@ -68,6 +104,16 @@ class App extends Component{
             }} 
           />
 
+        <Route path="/login" render={() => (
+          <LoginForm handleLogin={this.handleLogin} />
+          )} 
+        />
+
+        <Route path="/register" render={() => (
+          <RegisterForm handleRegister={this.handleRegister} />
+          )} 
+        />
+
         </main>
 
       </div>
@@ -76,4 +122,4 @@ class App extends Component{
 
 }
 
-export default App;
+export default withRouter(App);

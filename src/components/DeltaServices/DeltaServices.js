@@ -1,7 +1,7 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-const Services = (props) => {
+const DeltaServices = (props) => {
     return(
         <div> 
             <section>
@@ -14,4 +14,4 @@ const Services = (props) => {
     )
 }
 
-export default Services;
+export default DeltaServices;
