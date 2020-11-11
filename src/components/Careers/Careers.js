@@ -190,7 +190,6 @@ class Careers extends Component{
         </div>
     )        
     }
-
 }
 
 export default Careers;
