@@ -12,7 +12,7 @@ class Header extends Component{
         }
     }
 
-    componentDidMount(props) {
+    componentDidMount = async (props) => {
         this.props.handleVerify();
     }
 

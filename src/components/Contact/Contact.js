@@ -8,8 +8,8 @@ class Contact extends Component{
         super(props);
 
         this.state={
-            FirstName: "",
-            LastName: "",
+            firstName: "",
+            lastName: "",
             emailAddress: "",
             phone: "",
             jobEstimate: "",
@@ -58,29 +58,29 @@ class Contact extends Component{
                 <h2>Contact Delta Painting Inc.</h2>
                 <p className="inputDescription">Please fill out the form below to contact Delta Painting, Inc. When filling out the form please input your most recent and valid contact information so Delta Painting, Inc. can contact you back as soon as possible.  </p>
                 <form className="ContactInfo" onSubmit={this.handleSubmit}>
-                    <form>
+                    <div>
                         First Name: 
                         <input className = 'firstName'
                             type = 'text'
-                            name = 'FirstName'
+                            name = 'firstName'
                             placeholder = 'Enter First Name'
-                            value={this.state.FirstName}
+                            value={this.state.firstName}
                             onChange = {this.handleChange}
                             onSubmit={this.handleSubmit}
                         />                        
-                    </form>
+                    </div>
 
-                    <form>
+                    <div>
                     Last Name: 
                         <input className = 'lastName'
                             type = 'text'
-                            name = 'LastName'
+                            name = 'lastName'
                             placeholder = 'Enter Last Name'
-                            value={this.state.LastName}
+                            value={this.state.lastName}
                             onChange = {this.handleChange}
                             onSubmit={this.handleSubmit}
                         />                        
-                    </form>
+                    </div>
 
                     <div>
                     Email Address: 
@@ -119,13 +119,6 @@ class Contact extends Component{
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
-
-                        {/* <input className = 'jobEstimate'
-                            type = 'text'
-                            name = 'jobEstimate'
-                            placeholder = 'Enter Yes or No'
-                            onChange = {this.onChange}
-                        />                         */}
                     </div>
 
                     <div>
@@ -145,8 +138,6 @@ class Contact extends Component{
 
                 </form>
             </section>
-
-            <Link to="/ContactUs">Contact Us</Link>
         </div>
     )        
     }

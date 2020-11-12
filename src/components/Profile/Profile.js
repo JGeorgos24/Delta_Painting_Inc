@@ -10,12 +10,18 @@ class Profile extends Component{
         }
     }
 
+    componentDidMount = async (props) => {
+        this.props.handleVerify();
+    }
 
     render(props) {
+        console.log(this.props.currentUser)
         return(
             <div>
                 <section>
-                    <h1>Hello, {this.props.currentUser.username}</h1>
+                    {this.props.currentUser && 
+                        <h1>Hello, {this.props.currentUser.username}</h1>
+                    }
                 </section>
                 <section>
                     <button onClick={this.props.handleLogout}>Logout</button>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Careers.css";
-import {Link} from "react-router-dom";
+import {Link, withRouter} from "react-router-dom";
+import emailjs from 'emailjs-com';
 
 class Careers extends Component{
     constructor(props) {
@@ -22,19 +23,33 @@ class Careers extends Component{
         }
     }
 
-    handleChange = (event) => {
+    sendEmail= async (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_8grhulh', 'careers_template', e.target, 'user_DrwIKcQYggJOAcbPPmG0M')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset()
+          this.props.history.push("/Careers");
+    }
+
+    handleChange = async (event) => {
         event.preventDefault();
         this.setState({
             [event.target.name]: event.target.value,
         })
     }
 
-    handleSubmit= (event) => {
-        event.preventDefault();
+    handleSubmit= async (e) => {
+        e.preventDefault();
         console.log(this.state)
         this.setState({
-            [event.target.name]: event.target.value,
+            [e.target.name]: e.target.value,
         })
+        this.sendEmail(e);
     }
 
 
@@ -49,7 +64,7 @@ class Careers extends Component{
                 <h2>Careers Delta Painting Inc.</h2>
                 <p className="inputDescription">Input direcions for career submitions here... </p>
                 <form className="CareerInfo" onSubmit={this.handleSubmit}>
-                    <form>
+                    <div>
                         First Name: 
                         <input className = 'firstName'
                             type = 'text'
@@ -59,9 +74,9 @@ class Careers extends Component{
                             onChange = {this.handleChange}
                             onSubmit={this.handleSubmit}
                         />                        
-                    </form>
+                    </div>
 
-                    <form>
+                    <div>
                     Last Name: 
                         <input className = 'lastName'
                             type = 'text'
@@ -71,7 +86,7 @@ class Careers extends Component{
                             onChange = {this.handleChange}
                             onSubmit={this.handleSubmit}
                         />                        
-                    </form>
+                    </div>
 
                     <div>
                     Email Address: 
@@ -205,6 +220,7 @@ class Careers extends Component{
                             onChange = {this.handleChange}
                             onSubmit={this.handleSubmit}
                             >
+                            <option value="">Select...</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
@@ -223,8 +239,7 @@ class Careers extends Component{
                     </div>
 
                     <div>
-                    Qualifications: 
-                    {/* <br/> */}
+                    Qualifications:
                         <input className = 'qualifications'
                             type = 'textarea'
                             name = 'qualifications'
@@ -256,4 +271,4 @@ class Careers extends Component{
     }
 }
 
-export default Careers;
+export default withRouter(Careers);

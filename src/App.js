@@ -11,7 +11,7 @@ import DeltaServices from "./components/DeltaServices/DeltaServices";
 import PhotoGallery from "./components/PhotoGallery/PhotoGallery";
 import Careers from "./components/Careers/Careers";
 import Contact from "./components/Contact/Contact";
-import ContactContactUs from "./components/Contact/ContactContactUs";
+
 
 import RegisterForm from "./components/RegisterForm/RegisterForm"
 import LoginForm from "./components/LoginForm/LoginForm";
@@ -59,7 +59,7 @@ class App extends Component{
     this.props.history.push("/login");
   }
 
-  componentDidMount() {
+  componentDidMount = async() => {
     this.handleVerify();
   }
 
@@ -98,7 +98,7 @@ class App extends Component{
 
           <Route exact path="/Careers"
             render={ (props) => {
-              return <Careers {...this.state} />
+              return <Careers {...this.props} {...this.state} />
             }} 
           />
 
@@ -127,7 +127,7 @@ class App extends Component{
           />
           }} 
         />
-
+  
         <Route path="/Profile" render={(props) => {
           return <Profile
             {...this.props}
@@ -137,12 +137,6 @@ class App extends Component{
             currentUser={this.state.currentUser}
           />
           }} 
-        />
-
-        <Route exact path="/ContactUs"
-            render={ (props) => {
-              return <ContactContactUs {...this.state} />
-            }} 
         />
 
         </main>
