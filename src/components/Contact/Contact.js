@@ -1,19 +1,32 @@
 import React, { Component } from "react";
 import "./Contact.css";
 import {Link} from "react-router-dom";
+import emailjs from 'emailjs-com';
 
 class Contact extends Component{
     constructor(props) {
         super(props);
 
         this.state={
-            firstName: "",
-            lastName: "",
+            FirstName: "",
+            LastName: "",
             emailAddress: "",
             phone: "",
             jobEstimate: "",
             reasonOfContact: "",
         }
+    }
+
+    sendEmail= (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_8grhulh', 'test_run_1', e.target, 'user_DrwIKcQYggJOAcbPPmG0M')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset()
     }
 
     handleChange = (event) => {
@@ -23,13 +36,15 @@ class Contact extends Component{
         })
     }
 
-    handleSubmit= (event) => {
-        event.preventDefault();
+    handleSubmit= (e) => {
+        e.preventDefault();
         console.log(this.state)
         this.setState({
-            [event.target.name]: event.target.value,
+            [e.target.name]: e.target.value,
         })
+        this.sendEmail(e);
     }
+
 
 
     render(){
@@ -47,9 +62,9 @@ class Contact extends Component{
                         First Name: 
                         <input className = 'firstName'
                             type = 'text'
-                            name = 'firstName'
+                            name = 'FirstName'
                             placeholder = 'Enter First Name'
-                            value={this.state.firstName}
+                            value={this.state.FirstName}
                             onChange = {this.handleChange}
                             onSubmit={this.handleSubmit}
                         />                        
@@ -59,9 +74,9 @@ class Contact extends Component{
                     Last Name: 
                         <input className = 'lastName'
                             type = 'text'
-                            name = 'lastName'
+                            name = 'LastName'
                             placeholder = 'Enter Last Name'
-                            value={this.state.lastName}
+                            value={this.state.LastName}
                             onChange = {this.handleChange}
                             onSubmit={this.handleSubmit}
                         />                        
@@ -100,6 +115,7 @@ class Contact extends Component{
                             onChange = {this.handleChange}
                             onSubmit={this.handleSubmit}
                             >
+                            <option value="Select...">Select...</option>
                             <option value="Yes">Yes</option>
                             <option value="No">No</option>
                         </select>
@@ -129,6 +145,8 @@ class Contact extends Component{
 
                 </form>
             </section>
+
+            <Link to="/ContactUs">Contact Us</Link>
         </div>
     )        
     }

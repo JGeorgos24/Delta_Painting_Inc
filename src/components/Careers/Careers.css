@@ -22,12 +22,12 @@ section{
 }
 
 .firstName, .lastName, .emailAddress, .phone, .address1, 
-.city, .state, .zip, .unionName {
+.city, .states, .zip, .unionName {
     margin: 5px;
     width: 150px;
 }
 
-.unionPainter{
+.unionPainter, .resume{
     margin: 5px;
 }
 
