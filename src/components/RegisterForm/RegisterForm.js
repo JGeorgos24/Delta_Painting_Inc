@@ -52,7 +52,7 @@ class RegisterForm extends Component{
                             onChange={this.handleChange}
                         />
 
-                        <input type="submit" value="Register" />   
+                        <input className="Register-SubmitButton" type="submit" value="Register" />   
                     </form>
                     <Link className="Login-Register-Link" to="/login">Already Registered? Login Here...</Link>
                 </div>
