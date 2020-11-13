@@ -18,7 +18,7 @@ class Header extends Component{
 
     render(props){
         return(
-            <header> 
+            <header className="Header-Container"> 
                 <section>
                     <img className="HeaderLogo" src="https://i.imgur.com/I0f24HE.png" alt="Delta Painting Inc Logo" /> 
                 </section>

@@ -5,6 +5,7 @@ import { Route, Link, withRouter } from 'react-router-dom';
 import { render } from 'react-dom';
 
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import About from "./components/About/About";
 import DeltaServices from "./components/DeltaServices/DeltaServices";
@@ -71,6 +72,7 @@ class App extends Component{
 
         </header>
 
+        <div id="wrap">
         <main>
           <Route exact path="/Home"
             render={ (props) => {
@@ -140,6 +142,11 @@ class App extends Component{
         />
 
         </main>
+        </div>
+
+        <footer>
+          <Footer {...this.props} {...this.state}  currentUser={this.state.currentUser} handleVerify={this.handleVerify}/>
+        </footer>
 
       </div>
     );    

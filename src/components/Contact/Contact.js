@@ -50,13 +50,11 @@ class Contact extends Component{
     render(){
         console.log(this.state)
     return(
-        <div> 
-            <section>
-                <h1>Contact Page Render</h1>
-            </section>
+        <div className="Contact-Container"> 
             <section>
                 <h2>Contact Delta Painting Inc.</h2>
                 <p className="inputDescription">Please fill out the form below to contact Delta Painting, Inc. When filling out the form please input your most recent and valid contact information so Delta Painting, Inc. can contact you back as soon as possible.  </p>
+                <p>Please fill out the form below.</p>
                 <form className="ContactInfo" onSubmit={this.handleSubmit}>
                     <div>
                         First Name: 

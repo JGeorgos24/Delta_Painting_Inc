@@ -22,35 +22,37 @@ class RegisterForm extends Component{
 
     render() {
         return(
-            <form className="Login-Register-Form" onSubmit={(e) => this.props.handleRegister(e, this.state)}>
+            <div className="Register-Container">
+                <form className="Login-Register-Form" onSubmit={(e) => this.props.handleRegister(e, this.state)}>
 
-                <input className="Login-Register-Input"
-                    type="text"
-                    name="username"
-                    placeholder="Enter Username"
-                    value={this.state.username}
-                    onChange={this.handleChange}
-                />
+                    <input className="Login-Register-Input"
+                        type="text"
+                        name="username"
+                        placeholder="Enter Username"
+                        value={this.state.username}
+                        onChange={this.handleChange}
+                    />
 
-                <input className="Login-Register-Input"
-                    type="password"
-                    name="password"
-                    placeholder="Enter Password"
-                    value={this.state.password}
-                    onChange={this.handleChange}
-                />
+                    <input className="Login-Register-Input"
+                        type="password"
+                        name="password"
+                        placeholder="Enter Password"
+                        value={this.state.password}
+                        onChange={this.handleChange}
+                    />
 
-                <input className="Login-Register-Input"
-                    type="text"
-                    name="email"
-                    placeholder="Enter Email Address"
-                    value={this.state.email}
-                    onChange={this.handleChange}
-                />
+                    <input className="Login-Register-Input"
+                        type="text"
+                        name="email"
+                        placeholder="Enter Email Address"
+                        value={this.state.email}
+                        onChange={this.handleChange}
+                    />
 
-                <input type="submit" value="Register" />
-                <Link className="Login-Register-Link" to="/login">Login</Link>
-            </form>
+                    <input type="submit" value="Register" />
+                    <Link className="Login-Register-Link" to="/login">Login</Link>
+                </form>
+            </div>
         )
     }
 }

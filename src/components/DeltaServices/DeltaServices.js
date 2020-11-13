@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const DeltaServices = (props) => {
     return(
-        <div> 
+        <div className="DeltaService-Container"> 
             <section>
                 <h1>Services Page Render</h1>
             </section>

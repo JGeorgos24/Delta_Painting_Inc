@@ -17,7 +17,7 @@ class Profile extends Component{
     render(props) {
         console.log(this.props.currentUser)
         return(
-            <div>
+            <div className="Profile-Container">
                 <section>
                     {this.props.currentUser && 
                         <h1>Hello, {this.props.currentUser.username}</h1>

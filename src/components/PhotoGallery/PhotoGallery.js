@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 
 const PhotoGallery = (props) => {
     return(
-        <div> 
+        <div className="PhotoGallery-Container"> 
             <section>
                 <h1>Photo Gallery Page Render</h1>
             </section>

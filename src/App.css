@@ -2,12 +2,49 @@
   text-align: center;
 }
 
-.main{
-  
+html,
+body {
+  height: 100%;
 }
 
+#wrap {
+  min-height: 100%;
+}
 
+main{
+  overflow: auto;
+  padding-bottom: 50px;
+  min-height: 100vh;
+}
 
+footer{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: -50px;
+  /* negative value of footer height */
+  height: 50px;
+  width: 100vw;
+  clear: both;
+  background-color: gray;
+}
+
+body:before {
+  content: "";
+  height: 100%;
+  float: left;
+  width: 0;
+  margin-top: -32767px;
+  /* thank you Erik J - negate effect of float*/
+}
+
+@media only screen and (max-width: 500px) {
+  .Home-Wallpaper, .About-Wallpaper, .Careers-Container, .Contact-Container, .DeltaService-Container, .footerContainer,
+   .Header-Container, .Home-Container, .Login-Container, .PhotoGallery-Container, .Profile-Container, .Register-Container{
+    height:100%;  
+    width:100vw;
+   }
+}
 
 
 

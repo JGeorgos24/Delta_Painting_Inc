@@ -18,7 +18,7 @@ section{
 }
 
 .inputDescription{
-    width: 650px;
+    width: 60%;
 }
 
 .firstName, .lastName, .emailAddress, .phone, .address1, 
@@ -43,4 +43,65 @@ section{
     justify-content: center;
     width: 100px;
     height: 50px;
+}
+
+
+@media only screen and (max-width: 500px) {
+    section{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+    }
+
+    .Careers-Container{
+        width: 95%;
+    }
+    
+    .CareerInfo{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        margin: 10px;
+    }
+    
+    .inputDescription{
+        width: 60%;
+    }
+    
+    .firstName, .lastName, .emailAddress, .phone, .address1, 
+    .city, .states, .zip, .unionName {
+        margin: 5px;
+        width: 150px;
+        border: .5px solid rgba(0, 0, 0, 0.719);
+    }
+    
+    .unionPainter, .resume{
+        margin: 5px;
+    }
+
+    .states{
+        overflow:auto;
+    }
+    
+    
+    .qualifications{
+        margin: 5px;
+        height: 50px;
+        width: 80%;
+        border: .5px solid rgba(0, 0, 0, 0.719);
+    }
+    
+    .submitButton{
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        height: 50px;
+        border: .5px solid rgba(0, 0, 0, 0.719);
+    }
 }

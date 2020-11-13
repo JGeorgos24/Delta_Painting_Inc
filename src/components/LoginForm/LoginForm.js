@@ -26,26 +26,29 @@ class LoginForm extends Component{
 
     render() {
         return(
-            <form className="Login-Register-Form" onSubmit={(e) => this.props.handleLogin(e, this.state)}>
-                <input className="Login-Register-Input"
-                    type="text"
-                    name="username"
-                    value={this.state.username}
-                    placeholder="Enter Username"
-                    onChange={this.handleChange}
-                />
+            <div className="Login-Container">
+                <form className="Login-Register-Form" onSubmit={(e) => this.props.handleLogin(e, this.state)}>
+                    <input className="Login-Register-Input"
+                        type="text"
+                        name="username"
+                        value={this.state.username}
+                        placeholder="Enter Username"
+                        onChange={this.handleChange}
+                    />
 
-                <input className="Login-Register-Input"
-                    type="password"
-                    name="password"
-                    placeholder="Enter Password"
-                    value={this.state.password}
-                    onChange={this.handleChange}
-                />
+                    <input className="Login-Register-Input"
+                        type="password"
+                        name="password"
+                        placeholder="Enter Password"
+                        value={this.state.password}
+                        onChange={this.handleChange}
+                    />
 
-                <input type="submit" value="Login" />
-                <Link className="Login-Register-Link" to="/register">Register</Link>
-            </form>
+                    <input type="submit" value="Login" />
+                    <Link className="Login-Register-Link" to="/register">Register</Link>
+                </form>                
+            </div>
+
         )
     }
 }

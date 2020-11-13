@@ -15,10 +15,11 @@ section{
     align-content: center;
     flex-direction: column;
     margin: 10px;
+    width: 75%;
 }
 
 .inputDescription{
-    width: 650px;
+    width: 60%;
 }
 
 .firstName, .lastName, .emailAddress, .phone, .jobEstimate{
@@ -28,7 +29,7 @@ section{
 .reasonOfContact{
     margin: 5px;
     height: 50px;
-    width: 450px;
+    width: 100%;
 }
 
 .submitButton{
@@ -36,4 +37,55 @@ section{
     justify-content: center;
     width: 100px;
     height: 50px;
+}
+
+
+@media only screen and (max-width: 500px) {
+    section{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    
+    .Contact-Container{
+        width:95%
+    }
+    
+    .ContactInfo{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        margin: 10px;
+        width: 75%;
+    }
+    
+    .inputDescription{
+        width: 60%;
+    }
+    
+    .firstName, .lastName, .emailAddress, .phone, .jobEstimate{
+        margin: 5px;
+        border: .5px solid rgba(0, 0, 0, 0.719);
+    }
+    
+    .reasonOfContact{
+        margin: 5px;
+        height: 50px;
+        width: 100%;
+        border: .5px solid rgba(0, 0, 0, 0.719);
+    }
+    
+    .submitButton{
+        display: flex;
+        justify-content: center;
+        width: 60px;
+        height: 16px;
+        border: .5px solid rgba(0, 0, 0, 0.719);
+    }
 }

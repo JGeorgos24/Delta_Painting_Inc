@@ -56,13 +56,13 @@ class Careers extends Component{
     render(){
         console.log(this.state)
     return(
-        <div> 
-            <section>
-                <h1>Careers Page Render</h1>
-            </section>
+        <div className="Careers-Container"> 
+
             <section>
                 <h2>Careers Delta Painting Inc.</h2>
-                <p className="inputDescription">Input direcions for career submitions here... </p>
+                <p className="inputDescription">Please fill out the form below to the best of your abilities. Make sure that all the information 
+                    your are inputting are the most up to date and correct credentials about yourself. Thank you for applying.
+                </p>
                 <form className="CareerInfo" onSubmit={this.handleSubmit}>
                     <div>
                         First Name: 
