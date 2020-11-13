@@ -54,6 +54,7 @@ class RegisterForm extends Component{
 
                         <input className="Register-SubmitButton" type="submit" value="Register" />   
                     </form>
+                    
                     <Link className="Login-Register-Link" to="/login">Already Registered? Login Here...</Link>
                 </div>
             </div>

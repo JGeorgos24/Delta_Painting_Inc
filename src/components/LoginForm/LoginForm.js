@@ -46,9 +46,9 @@ class LoginForm extends Component{
                             onChange={this.handleChange}
                         />
 
-                        <input className="Login-SubmitButton" type="submit" value="Login" />
-                        
+                        <input className="Login-SubmitButton" type="submit" value="Login" /> 
                     </form> 
+                    
                     <Link className="Login-Register-Link" to="/register">Don't have an account? Register Here...</Link>    
                 </div>           
             </div>
