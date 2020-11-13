@@ -52,7 +52,6 @@ class LoginForm extends Component{
                     <Link className="Login-Register-Link" to="/register">Don't have an account? Register Here...</Link>    
                 </div>           
             </div>
-
         )
     }
 }
