@@ -1,4 +1,4 @@
-.Login-Container{
+.Register-Container{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -10,32 +10,11 @@
     background-size: cover;
 }
 
-.Login-UserInput-Container{
+.Register-UserInput-Container{
     margin: 50px;
     padding: 25px;
     border: 20px solid rgba(92, 92, 92, 0.932);
     background-color: rgba(66, 65, 65, 0.658);
     border-radius: 15px;
     color: white;
-}
-
-.Login-Register-Form{
-    margin: 40px 10px 10px 10px;
-}
-
-.Login-Register-Input{
-    margin: 10px;
-    border: 5px solid rgba(92, 92, 92, 0.932);
-}
-
-.Login-Register-Link{
-    margin: 15px;
-    color:white;
-    text-decoration:none;
-}
-
-.Login-Register-Link:hover{
-    color:red;
-    text-decoration:none;
-    font-weight: bolder;
 }

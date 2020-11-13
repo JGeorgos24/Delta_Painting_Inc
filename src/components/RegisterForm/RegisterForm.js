@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
+import "./RegisterForm.css";
 
 class RegisterForm extends Component{
     constructor(props){
@@ -23,35 +24,38 @@ class RegisterForm extends Component{
     render() {
         return(
             <div className="Register-Container">
-                <form className="Login-Register-Form" onSubmit={(e) => this.props.handleRegister(e, this.state)}>
+                <div className="Register-UserInput-Container">
+                    <h1>Register</h1>
+                    <form className="Login-Register-Form" onSubmit={(e) => this.props.handleRegister(e, this.state)}>
 
-                    <input className="Login-Register-Input"
-                        type="text"
-                        name="username"
-                        placeholder="Enter Username"
-                        value={this.state.username}
-                        onChange={this.handleChange}
-                    />
+                        <input className="Login-Register-Input"
+                            type="text"
+                            name="username"
+                            placeholder="Enter Username"
+                            value={this.state.username}
+                            onChange={this.handleChange}
+                        />
 
-                    <input className="Login-Register-Input"
-                        type="password"
-                        name="password"
-                        placeholder="Enter Password"
-                        value={this.state.password}
-                        onChange={this.handleChange}
-                    />
+                        <input className="Login-Register-Input"
+                            type="password"
+                            name="password"
+                            placeholder="Enter Password"
+                            value={this.state.password}
+                            onChange={this.handleChange}
+                        />
 
-                    <input className="Login-Register-Input"
-                        type="text"
-                        name="email"
-                        placeholder="Enter Email Address"
-                        value={this.state.email}
-                        onChange={this.handleChange}
-                    />
+                        <input className="Login-Register-Input"
+                            type="text"
+                            name="email"
+                            placeholder="Enter Email Address"
+                            value={this.state.email}
+                            onChange={this.handleChange}
+                        />
 
-                    <input type="submit" value="Register" />
-                    <Link className="Login-Register-Link" to="/login">Login</Link>
-                </form>
+                        <input type="submit" value="Register" />   
+                    </form>
+                    <Link className="Login-Register-Link" to="/login">Already Registered? Login Here...</Link>
+                </div>
             </div>
         )
     }
