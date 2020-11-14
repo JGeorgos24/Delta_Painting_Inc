@@ -26,6 +26,7 @@
 .Login-Register-Input{
     margin: 10px;
     border: 5px solid rgba(92, 92, 92, 0.932);
+    border-radius: 5px;
 }
 
 .Login-Register-Link{
@@ -38,6 +39,20 @@
     color:blue;
     text-decoration:none;
     font-weight: bolder;
+}
+
+.Login-SubmitButton{
+    border: 5px solid rgba(92, 92, 92, 0.932);
+    border-radius: 5px;
+    font-weight:bold;
+}
+
+.Login-SubmitButton:hover{
+    border: 5px solid white;
+    border-radius: 5px;
+    background-color: rgb(112, 112, 112);
+    color:white;
+    font-weight:bold;
 }
 
 

@@ -69,7 +69,22 @@ section{
     display: flex;
     justify-content: center;
     width: 100px;
-    height: 50px;
+    height: 30px;
+    border: 5px solid rgba(185, 185, 185, 0.932);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.submitButton:hover{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(112, 112, 112);
+    color:white;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    border: 5px solid rgba(185, 185, 185, 0.932);
+    border-radius: 5px;
 }
 
 
@@ -152,7 +167,20 @@ section{
         display: flex;
         justify-content: center;
         width: 100px;
-        height: 50px;
-        border: .5px solid rgba(0, 0, 0, 0.719);
+        height: 25px;
+        border: 3px solid rgba(185, 185, 185, 0.932);
+        border-radius: 5px;
+    }
+
+    .submitButton:hover{
+        display: flex;
+        justify-content: center;
+        background-color: rgb(112, 112, 112);
+        color:white;
+        font-weight: bold;
+        width: 100px;
+        height: 30px;
+        border: 5px solid rgba(185, 185, 185, 0.932);
+        border-radius: 5px;
     }
 }
