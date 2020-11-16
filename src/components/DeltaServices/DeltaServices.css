@@ -1,0 +1,106 @@
+.DeltaService-Container{
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1535673774336-ef95d2851cf3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-direction: column;
+}
+
+.DeltaServices-Header{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;   
+    background-color: #8a8a8ae3;
+    height: 20vh;
+    width: 71vw;
+    margin:10px;
+    border-radius: 15px;
+    border: 1px solid rgb(253, 253, 253);
+}
+
+.Service-Description{
+    margin: 0px 150px;
+    font-weight:  bold; 
+}
+
+.Service-List {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    width: 70vw;
+    background-color: #8a8a8ae3;
+    border-radius: 15px;
+    text-align: left;
+    padding: 10px;
+    margin:10px;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 24px 0 rgba(0, 0, 0, 0.19);
+    overflow: scroll;
+    border: 1px solid rgb(253, 253, 253);
+}
+
+.Service-List::-webkit-scrollbar {
+    display: none;
+}
+
+.A-Service {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 10px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+.Image-Thumbnail {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    width: auto;
+    height: 300px;
+    margin: auto;
+}
+
+.Text-Overlay {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: .5s ease;
+    text-align: center;
+    font-size: 30px;
+}
+
+.Text-In-Overlay {
+    color: white;
+    font-size: 4vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #15181abb;
+}
+
+.A-Service:hover .Text-Overlay {
+    opacity: 1;
+    background-color: #15181abb;
+}

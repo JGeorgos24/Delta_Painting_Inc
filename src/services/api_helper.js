@@ -1,7 +1,8 @@
 import axios from "axios";
 
 const api = axios.create ({
-    baseURL: "http://localhost:3001" //"https://heroku.app.blahh-blahh-blahh.com"
+    // baseURL: "https://delta-painting-backend.herokuapp.com" 
+    baseURL: "http://localhost:3001/"
 })
 
 
@@ -16,9 +17,12 @@ export const registerUser = async (registerData) => {
 
 // goes to http://localhost:3001/auth/login
 export const loginUser = async (loginData) => {
+    console.log("made it api helper 1")
     const resp = await api.post("/auth/login", loginData);
+    console.log("made it api helper 2")
     localStorage.setItem("authToken", resp.data.token);
     api.defaults.headers.common.authorization= `Bearer ${resp.data.token}`;
+    console.log(resp)
     return resp.data.user; 
 }
 

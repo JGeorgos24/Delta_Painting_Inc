@@ -1,0 +1,114 @@
+.PhotoGallery-Container{
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://i.imgur.com/cMEXjJI.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-direction: column;
+}
+
+.PhotoGallery-Header{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;   
+    background-color: #8a8a8a7e;
+    height: 8vh;
+    width: 61vw;
+    margin:10px;
+    border-radius: 15px;
+    border: 1px solid rgb(253, 253, 253);
+}
+
+.PhotoGallery-Description{
+    margin: 0px 150px;
+    font-weight:  bold; 
+}
+
+.PhotoGallery-List{
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 75vh;
+    width: 60vw;
+    background-color: #8a8a8a7a;
+    border-radius: 15px;
+    text-align: left;
+    padding: 10px;
+    margin:10px;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 10px 24px 0 rgba(0, 0, 0, 0.19);
+    overflow: scroll;
+    border: 1px solid rgb(253, 253, 253);
+}
+
+.PhotoGallery-List::-webkit-scrollbar {
+    display: none;
+}
+
+.A-Job {
+    position: relative;
+    width: 700px;
+    height: 300px;
+    overflow: hidden;
+    margin: 10px;
+    border: 5px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color:#33343586;   
+}
+
+.Job-Image-Thumbnail {
+    position: absolute;
+    /* top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    width: auto;
+    height: 300px;
+    margin: auto; */   
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%; 
+}
+
+.Job-Text-Overlay {
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    transition: .5s ease;
+    text-align: center;
+    font-size: 30px;
+}
+
+.Job-Text-In-Overlay {
+    color: white;
+    font-size: 4vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #15181abb;
+}
+
+.A-Job:hover .Job-Text-Overlay {
+    opacity: 1;
+    background-color: #15181abb;
+}

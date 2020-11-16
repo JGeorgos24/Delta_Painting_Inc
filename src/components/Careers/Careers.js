@@ -59,7 +59,7 @@ class Careers extends Component{
         <div className="Careers-Container">
             <div className="Careers-UserInput-Container">    
                 <section>
-                    <h2>Careers Delta Painting Inc.</h2>
+                    <h2>Careers at Delta Painting Inc.</h2>
                     <p className="inputDescription">Please fill out the form below to the best of your abilities. Make sure that all the information 
                         your are inputting are the most up to date and correct credentials about yourself. Thank you for applying.
                     </p>

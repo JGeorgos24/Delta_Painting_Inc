@@ -25,6 +25,8 @@ class App extends Component{
 
     this.state={
       currentUser: null,
+      error:"",
+      loggedInUser: false,
     }
   }
 
@@ -33,21 +35,49 @@ class App extends Component{
     const currentUser = await registerUser(registerData);
     console.log(currentUser)
     this.setState({currentUser});
-    this.props.history.push("/login");
+    this.props.history.push("/Profile");
   }
 
   handleLogin = async (e, loginData) => {
     e.preventDefault();
+    console.log("MADE IT HERE 1")
     const currentUser = await loginUser(loginData);
+    console.log("MADE IT HERE 2")
+    if(currentUser){
+      this.setState({
+        loggedInUser: true,
+        error:"",
+        currentUser
+      });      
+    }
+    let loggedInUser= this.state.loggedInUser;
+    console.log(this.state)
     console.log(currentUser)
-    this.setState({currentUser});
-    this.props.history.push("/Profile");
+
+    
+    if(loggedInUser === true){
+      this.setState({
+        currentUser,
+        loggedInUser: true,
+        error:"",
+      })
+      this.props.history.push("/Profile");      
+    }
+    if(loggedInUser === false){
+      console.log(this.state)
+      this.setState({
+        error: "Incorrect Login Credentials"
+      })
+    }
   }
 
   handleVerify = async() => {
     const currentUser = await verifyUser();
     if (currentUser){
-      this.setState({currentUser: currentUser});
+      this.setState({
+        loggedInUser: true,
+        currentUser: currentUser
+      });
       this.props.history.push("/login");
     }
   }
@@ -56,7 +86,10 @@ class App extends Component{
     e.preventDefault();
     localStorage.removeItem("authToken");
     currentUser= this.state.currentUser
-    this.setState({currentUser:null})
+    this.setState({
+      currentUser:null,
+      loggedInUser: false
+    })
     this.props.history.push("/login");
   }
 
