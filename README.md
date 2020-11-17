@@ -37,27 +37,27 @@ Below are user stories of how and what a user should be able to do while on the 
 The functionality of my website will be broken down into separate list: MVP and Post MVP. MVP will be the minimum viable product the client expects to see out of my website. Post MVP will be any additional product I could add to my website to improve functionality and styling.
 
 #### MVP for Delta Painting Inc. Website
--Have every page render correctly
--Redesign Delta Painting Inc. logo as they do not have one available to them on the computer to share. 
--Construct an About Page so users can learn more about the background of Delta Painting Inc. 
--Construct a Service Page so users can know about the services that Delta Painting Inc. can provide for them. 
--Develop a photo gallery to show of previous work that Delta Painting has provided to previous customers. 
--Create a Careers page to have users be able to apply to work for Delta Painting Inc. 
--Create a Contact page to give users the ability to contact Delta Painting Inc. for job estimates and referrals. 
--Implement a backend database through express.
--Link backend to front-end properly. 
--Have job applications submitted be saved to the backend data. 
--Have Contact submissions be saved to the backend database. 
--Have website navigation flow smoothly from page to page. 
--Incorporate a professional CSS design as this is a website for a real company. 
+- Have every page render correctly
+- Redesign Delta Painting Inc. logo as they do not have one available to them on the computer to share. 
+- Construct an About Page so users can learn more about the background of Delta Painting Inc. 
+- Construct a Service Page so users can know about the services that Delta Painting Inc. can provide for them. 
+- Develop a photo gallery to show of previous work that Delta Painting has provided to previous customers. 
+- Create a Careers page to have users be able to apply to work for Delta Painting Inc. 
+- Create a Contact page to give users the ability to contact Delta Painting Inc. for job estimates and referrals. 
+- Implement a backend database through express.
+- Link backend to front-end properly. 
+- Have job applications submitted be saved to the backend data. 
+- Have Contact submissions be saved to the backend database. 
+- Have website navigation flow smoothly from page to page. 
+- Incorporate a professional CSS design as this is a website for a real company. 
 
 #### PostMVP for Delta Painting Inc. Website
--Have job applications and contact submissions send an email to the business owners. (New functionality not learned in class.
--Provide user with Login/Signup functionality to be able to view previous job applications submittals.
--Provide user with Login/Signup functionality to be able to view previous job referrals or estimates.
--Provide Login/Signup functionality to record employees hours. 
--Have employees be able to email hours worked to employer. 
--Improve overall styling and CSS. 
+- Have job applications and contact submissions send an email to the business owners. (New functionality not learned in class.
+- Provide user with Login/Signup functionality to be able to view previous job applications submittals.
+- Provide user with Login/Signup functionality to be able to view previous job referrals or estimates.
+- Provide Login/Signup functionality to record employees hours. 
+- Have employees be able to email hours worked to employer. 
+- Improve overall styling and CSS. 
 
 
 #### Explanations of Technologies Used and Installation Instructions
