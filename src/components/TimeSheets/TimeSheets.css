@@ -1,0 +1,182 @@
+section{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.TimeSheets-Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background-image: url("https://i.imgur.com/7wAZ2tU.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.TimeSheets-UserInput-Container{
+    margin: 60px;
+    padding: 25px;
+    width: 50%;
+    border: 20px solid rgba(92, 92, 92, 0.932);
+    background-color: rgba(66, 65, 65, 0.658);
+    border-radius: 15px;
+    color: white;
+}
+
+.TimeSheetsInfo{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 10px;
+    width: 75%;
+}
+
+.inputDescription{
+    width: 60%;
+}
+
+.firstName, .lastName{
+    margin: 5px;
+    border: 5px solid rgba(185, 185, 185, 0.932);
+    border-radius: 5px;
+}
+
+.WeekStartDate, .WeekEndDate{
+    margin: 5px;
+    border: 5px solid rgba(185, 185, 185, 0.932);
+    border-radius: 5px;
+    width: 185px;
+}
+
+.Monday, .Tuesday, .Wednesday, .Thursday, .Friday, .Saturday, .Sunday{
+    margin: 5px;
+    border: 5px solid rgba(185, 185, 185, 0.932);
+    border-radius: 5px;
+    width: 150px;
+}
+
+
+.submitButton{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    height: 30px;
+    border: 5px solid rgba(185, 185, 185, 0.932);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.submitButton:hover{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(112, 112, 112);
+    color:white;
+    font-weight: bold;
+    width: 100px;
+    height: 30px;
+    border: 5px solid rgba(185, 185, 185, 0.932);
+    border-radius: 5px;
+}
+
+
+@media only screen and (max-width: 500px) {
+    section{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+    }
+    
+    .TimeSheets-Container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        background-image: url("https://i.imgur.com/7wAZ2tU.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .TimeSheets-UserInput-Container{
+        margin: 15px;
+        padding: 10px;
+        width: 85%;
+        border: 4px solid rgba(92, 92, 92, 0.932);
+        background-color: rgba(66, 65, 65, 0.658);
+        border-radius: 15px;
+        color: white;
+    }
+    
+    .TimeSheetsInfo{
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        margin: 1px;
+        width: 75%;
+    }
+    
+    .inputDescription{
+        width: 100%;
+    }
+    
+    .firstName, .lastName {
+        margin: 1px;
+        border: 3px solid rgba(185, 185, 185, 0.932);
+        border-radius: 5px;
+        width: 185px;
+    }
+
+    .WeekStartDate, .WeekEndDate{
+        margin: 1px;
+        border: 5px solid rgba(185, 185, 185, 0.932);
+        border-radius: 5px;
+        width: 185px;
+    }
+
+    .Monday, .Tuesday, .Wednesday, .Thursday, .Friday, .Saturday, .Sunday{
+        margin: 1px;
+        border: 5px solid rgba(185, 185, 185, 0.932);
+        border-radius: 5px;
+        width: 185px;
+    }
+    
+    .submitButton{
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        height: 25px;
+        border: 3px solid rgba(185, 185, 185, 0.932);
+        border-radius: 5px;
+        margin:2px
+    }
+
+    .submitButton:hover{
+        display: flex;
+        justify-content: center;
+        background-color: rgb(112, 112, 112);
+        color:white;
+        font-weight: bold;
+        width: 100px;
+        height: 30px;
+        border: 5px solid rgba(185, 185, 185, 0.932);
+        border-radius: 5px;
+    }
+}

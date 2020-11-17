@@ -30,7 +30,6 @@ class Header extends Component{
                         <Link className="LinksInNavBar" to="/PhotoGallery">Photo Gallery</Link>
                         <Link className="LinksInNavBar" to="/Careers">Careers</Link>
                         <Link className="LinksInNavBar" to="/Contact">Contact</Link>
-                        {/* <Link className="LinksInNavBar" to="/login">Login/Register</Link> */}
                         {!this.props.currentUser ? <Link className="LinksInNavBar" to="/login">Login/Register</Link> : <Link className="LinksInNavBar" to="/Profile">Profile</Link>}
                     </nav>
                 </section>

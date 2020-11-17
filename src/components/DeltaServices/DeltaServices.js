@@ -5,13 +5,14 @@ import"./DeltaServices.css";
 const DeltaServices = (props) => {
     return(
         <div className="DeltaService-Container"> 
+        
             <div className="DeltaServices-Header">
                 <h1>Services Provided by Delta Painting Inc.</h1>
                 <p className="Service-Description">Delta Painting Inc. is a painting contractor that provides industrial and commercial painting services for any and all business needs. Shown below are some of the services that we specialize in. </p>
                 <h2>Industrial &amp; Commerical Services</h2>
             </div>
+
             <section>
-                
                 <div className="Service-List">
                     <div className="A-Service">
                         <img className="Image-Thumbnail" src="https://i.imgur.com/GapcGwA.png" alt="service image" />

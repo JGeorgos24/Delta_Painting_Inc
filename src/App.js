@@ -12,6 +12,7 @@ import DeltaServices from "./components/DeltaServices/DeltaServices";
 import PhotoGallery from "./components/PhotoGallery/PhotoGallery";
 import Careers from "./components/Careers/Careers";
 import Contact from "./components/Contact/Contact";
+import TimeSheets from "./components/TimeSheets/TimeSheets";
 
 
 import RegisterForm from "./components/RegisterForm/RegisterForm"
@@ -54,7 +55,7 @@ class App extends Component{
     console.log(this.state)
     console.log(currentUser)
 
-    
+
     if(loggedInUser === true){
       this.setState({
         currentUser,
@@ -165,6 +166,17 @@ class App extends Component{
   
         <Route path="/Profile" render={(props) => {
           return <Profile
+            {...this.props}
+            {...this.state} 
+            handleLogout={this.handleLogout}
+            handleVerify={this.handleVerify}  
+            currentUser={this.state.currentUser}
+          />
+          }} 
+        />
+
+        <Route path="/TimeSheets" render={(props) => {
+          return <TimeSheets
             {...this.props}
             {...this.state} 
             handleLogout={this.handleLogout}
