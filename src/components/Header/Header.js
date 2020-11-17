@@ -24,7 +24,7 @@ class Header extends Component{
                 </section>
                 <section className="NavBarOuter">
                     <nav className="NavBarInner">
-                        <Link className="LinksInNavBar" to="/Home">Home</Link>
+                        <Link className="LinksInNavBar" to="/">Home</Link>
                         <Link className="LinksInNavBar" to="/About">About</Link>
                         <Link className="LinksInNavBar" to="/DeltaServices">Services</Link>
                         <Link className="LinksInNavBar" to="/PhotoGallery">Photo Gallery</Link>

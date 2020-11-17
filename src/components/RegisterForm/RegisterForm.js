@@ -15,7 +15,6 @@ class RegisterForm extends Component{
 
     handleChange=(e)=>{
         const{name, value} = e.target;
-        // aka const name=e.target.name; const value = e.target.value
         this.setState({
             [name]:value,
         })

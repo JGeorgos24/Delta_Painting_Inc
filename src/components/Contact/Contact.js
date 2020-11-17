@@ -122,7 +122,6 @@ class Contact extends Component{
 
                         <div>
                         Reason of Contact: 
-                        {/* <br/> */}
                             <input className = 'reasonOfContact'
                                 type = 'textarea'
                                 name = 'reasonOfContact'

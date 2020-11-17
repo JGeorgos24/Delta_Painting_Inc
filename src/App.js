@@ -108,7 +108,7 @@ class App extends Component{
 
         <div id="wrap">
         <main>
-          <Route exact path="/Home"
+          <Route exact path="/"
             render={ (props) => {
               return <Home {...this.state} />
             }} 
