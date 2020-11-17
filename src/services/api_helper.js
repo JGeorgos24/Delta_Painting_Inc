@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create ({
-    // baseURL: "https://delta-painting-backend.herokuapp.com" 
-    baseURL: "http://localhost:3001/"
+    baseURL: "https://delta-painting-backend.herokuapp.com" 
+    // baseURL: "http://localhost:3001/"
 })
 
 
