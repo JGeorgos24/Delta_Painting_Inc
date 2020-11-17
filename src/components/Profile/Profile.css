@@ -87,4 +87,44 @@
         border-radius: 15px;
         color: white;
     }
+
+    .Profile-Links{
+        text-decoration: none;
+        font-size: 25px;
+        font-weight:bolder;
+        color: white;
+        padding:10px;
+    }
+    
+    .Profile-Links:hover{
+        text-decoration: underline;
+        font-size: 25px;
+        font-weight:bolder;
+        color: Blue;
+        padding:10px;
+    }
+    
+    .Logout-Button{
+        display: flex;
+        justify-content: center;
+        width: 100px;
+        height: 30px;
+        border: 5px solid rgba(185, 185, 185, 0.932);
+        border-radius: 5px;
+        margin:25px;
+        font-weight: bold;
+    }
+    
+    .Logout-Button:hover{
+        display: flex;
+        justify-content: center;
+        background-color: rgb(223, 77, 77);
+        color:white;
+        font-weight: bold;
+        width: 100px;
+        height: 30px;
+        margin:25px;
+        border: 5px solid rgba(0, 0, 0, 0.932);
+        border-radius: 5px;
+    }
 }
