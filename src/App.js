@@ -31,6 +31,7 @@ class App extends Component{
     }
   }
 
+  // Function to register a new user
   handleRegister = async (e, registerData) => {
     e.preventDefault();
     const currentUser = await registerUser(registerData);
@@ -39,11 +40,12 @@ class App extends Component{
     this.props.history.push("/Profile");
   }
 
+  // Function to login as registered user
+  // If statement to get login error message to appear
   handleLogin = async (e, loginData) => {
     e.preventDefault();
-    console.log("MADE IT HERE 1")
     const currentUser = await loginUser(loginData);
-    console.log("MADE IT HERE 2")
+
     if(currentUser){
       this.setState({
         loggedInUser: true,
@@ -52,9 +54,6 @@ class App extends Component{
       });      
     }
     let loggedInUser= this.state.loggedInUser;
-    console.log(this.state)
-    console.log(currentUser)
-
 
     if(loggedInUser === true){
       this.setState({
@@ -64,6 +63,7 @@ class App extends Component{
       })
       this.props.history.push("/Profile");      
     }
+
     if(loggedInUser === false){
       console.log(this.state)
       this.setState({
@@ -72,6 +72,7 @@ class App extends Component{
     }
   }
 
+  // Verify if a user is logged in 
   handleVerify = async() => {
     const currentUser = await verifyUser();
     if (currentUser){
@@ -83,6 +84,7 @@ class App extends Component{
     }
   }
 
+  // Function to make a user log out if a user is logged in er
   handleLogout = async(e, currentUser) => {
     e.preventDefault();
     localStorage.removeItem("authToken");
