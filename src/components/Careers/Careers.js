@@ -32,14 +32,13 @@ class Careers extends Component{
           }, (error) => {
               console.log(error.text);
           });
-          e.target.reset()
-          this.props.history.push("/Careers");
+          e.target.reset();
     }
 
-    handleChange = async (event) => {
-        event.preventDefault();
+    handleChange = async (e) => {
+        e.preventDefault();
         this.setState({
-            [event.target.name]: event.target.value,
+            [e.target.name]: e.target.value,
         })
     }
 

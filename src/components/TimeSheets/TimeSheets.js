@@ -29,10 +29,10 @@ class TimeSheets extends Component{
           e.target.reset()
     }
 
-    handleChange = (event) => {
-        event.preventDefault();
+    handleChange = (e) => {
+        e.preventDefault();
         this.setState({
-            [event.target.name]: event.target.value,
+            [e.target.name]: e.target.value,
         })
     }
 
