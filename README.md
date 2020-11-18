@@ -7,7 +7,7 @@
 I wanted to make a website for my parents industrial painting company. They currently have no way to be contact through the web and I wanted to make something to not only advertise there business but allow users to get in contact with them and potential apply for job positions through the website. 
 
 ## Project Links
-Below are links to navigate to our project repository and deployed website link. 
+Below are links to navigate to my project repository and deployed website link. 
 - Frontend GitHub Repo = [Delta Painting Inc. Frontend Database](https://github.com/JGeorgos24/Delta_Painting_Inc)
 - Backend GitHub Repo = [Delta Painting Inc. Backend Database](https://github.com/JGeorgos24/Delta_Painting_Inc_Backend)
 - Deployment = [Delta Painting Inc. Website](https://deltapaintinginc.surge.sh/) 
