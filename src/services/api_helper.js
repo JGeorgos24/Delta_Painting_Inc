@@ -5,7 +5,6 @@ const api = axios.create ({
     // baseURL: "http://localhost:3001/"
 })
 
-
 //======* Auth *============
 // going to http://localhost:3001/auth/signup
 export const registerUser = async (registerData) => {

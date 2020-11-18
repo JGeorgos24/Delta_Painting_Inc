@@ -38,7 +38,6 @@ class Contact extends Component{
 
     handleSubmit= (e) => {
         e.preventDefault();
-        console.log(this.state)
         this.setState({
             [e.target.name]: e.target.value,
         })
@@ -48,7 +47,6 @@ class Contact extends Component{
 
 
     render(){
-        console.log(this.state)
     return(
         <div className="Contact-Container"> 
             <div className="Contact-UserInput-Container">

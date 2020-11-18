@@ -23,6 +23,7 @@ class Careers extends Component{
         }
     }
 
+    // Function to handle sending an email.
     sendEmail= async (e) => {
         e.preventDefault();
     
@@ -44,7 +45,6 @@ class Careers extends Component{
 
     handleSubmit= async (e) => {
         e.preventDefault();
-        console.log(this.state)
         this.setState({
             [e.target.name]: e.target.value,
         })
@@ -53,7 +53,6 @@ class Careers extends Component{
 
 
     render(){
-        console.log(this.state)
     return(
         <div className="Careers-Container">
             <div className="Careers-UserInput-Container">    

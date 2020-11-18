@@ -105,90 +105,88 @@ class App extends Component{
       <div className="App">
         <header className="App-header">
           <Header {...this.props} {...this.state}  currentUser={this.state.currentUser} handleVerify={this.handleVerify}/>
-
         </header>
 
         <div id="wrap">
-        <main>
-          <Route exact path="/"
-            render={ (props) => {
-              return <Home {...this.state} />
+          <main>
+            <Route exact path="/"
+              render={ (props) => {
+                return <Home {...this.state} />
+              }} 
+            />
+
+            <Route exact path="/About"
+              render={ (props) => {
+                return <About {...this.state} />
+              }} 
+            />
+
+            <Route exact path="/DeltaServices"
+              render={ (props) => {
+                return <DeltaServices {...this.state} />
+              }} 
+            />
+
+            <Route exact path="/PhotoGallery"
+              render={ (props) => {
+                return <PhotoGallery {...this.state} />
+              }} 
+            />
+
+            <Route exact path="/Careers"
+              render={ (props) => {
+                return <Careers {...this.props} {...this.state} />
+              }} 
+            />
+
+            <Route exact path="/Contact"
+              render={ (props) => {
+                return <Contact {...this.state} />
+              }} 
+            />
+
+          <Route path="/login" render={(props) => {
+            return <LoginForm 
+              {...this.state} 
+              handleLogin={this.handleLogin}
+              handleVerify={this.handleVerify}
+              currentUser={this.state.currentUser}
+            />
             }} 
           />
 
-          <Route exact path="/About"
-            render={ (props) => {
-              return <About {...this.state} />
+          <Route path="/register" render={(props) => {
+            return <RegisterForm 
+              {...this.state} 
+              handleRegister={this.handleRegister}
+              handleVerify={this.handleVerify} 
+              currentUser={this.state.currentUser}
+            />
+            }} 
+          />
+    
+          <Route path="/Profile" render={(props) => {
+            return <Profile
+              {...this.props}
+              {...this.state} 
+              handleLogout={this.handleLogout}
+              handleVerify={this.handleVerify}  
+              currentUser={this.state.currentUser}
+            />
             }} 
           />
 
-          <Route exact path="/DeltaServices"
-            render={ (props) => {
-              return <DeltaServices {...this.state} />
+          <Route path="/TimeSheets" render={(props) => {
+            return <TimeSheets
+              {...this.props}
+              {...this.state} 
+              handleLogout={this.handleLogout}
+              handleVerify={this.handleVerify}  
+              currentUser={this.state.currentUser}
+            />
             }} 
           />
-
-          <Route exact path="/PhotoGallery"
-            render={ (props) => {
-              return <PhotoGallery {...this.state} />
-            }} 
-          />
-
-          <Route exact path="/Careers"
-            render={ (props) => {
-              return <Careers {...this.props} {...this.state} />
-            }} 
-          />
-
-          <Route exact path="/Contact"
-            render={ (props) => {
-              return <Contact {...this.state} />
-            }} 
-          />
-
-        <Route path="/login" render={(props) => {
-          return <LoginForm 
-            {...this.state} 
-            handleLogin={this.handleLogin}
-            handleVerify={this.handleVerify}
-            currentUser={this.state.currentUser}
-          />
-          }} 
-        />
-
-        <Route path="/register" render={(props) => {
-          return <RegisterForm 
-            {...this.state} 
-            handleRegister={this.handleRegister}
-            handleVerify={this.handleVerify} 
-            currentUser={this.state.currentUser}
-          />
-          }} 
-        />
-  
-        <Route path="/Profile" render={(props) => {
-          return <Profile
-            {...this.props}
-            {...this.state} 
-            handleLogout={this.handleLogout}
-            handleVerify={this.handleVerify}  
-            currentUser={this.state.currentUser}
-          />
-          }} 
-        />
-
-        <Route path="/TimeSheets" render={(props) => {
-          return <TimeSheets
-            {...this.props}
-            {...this.state} 
-            handleLogout={this.handleLogout}
-            handleVerify={this.handleVerify}  
-            currentUser={this.state.currentUser}
-          />
-          }} 
-        />
-
-        </main>
+          </main>
         </div>
 
         <footer>
